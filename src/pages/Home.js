@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import FirstImage from "../assets/image.jpg";
 import SecondImage from "../assets/morgan.jpg";
 import ThirdImage from "../assets/perfect.jpg";
 import FourthImage from "../assets/godly.jpg";
-import { FaPlus } from "react-icons/fa";
+import { FaPlus, FaMinus } from "react-icons/fa";
 
 const Home = () => {
+  const [show1, setShow1] = useState(false);
+  const [show2, setShow2] = useState(false);
+  const [show3, setShow3] = useState(false);
+  const [show4, setShow4] = useState(false);
+  const handleOpen1 = () => {
+    setShow1(!show1); // Toggle accordion
+  };
+  const handleOpen2 = () => {
+    setShow2(!show2); // Toggle accordion
+  };
+  const handleOpen3 = () => {
+    setShow3(!show3); // Toggle accordion
+  };
+  const handleOpen4 = () => {
+    setShow4(!show4); // Toggle accordion
+  };
   return (
     <div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -129,23 +145,59 @@ const Home = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 mb-28">
         <h2 className="font-bold text-3xl lg:col-span-1">FAQs</h2>
         <div className="lg:col-span-2">
-          <div className="w-full flex justify-between items-center rounded-md border border-gray-200 p-4 mb-2.5">
-            <p className="font-semibold">
-              NIFES is affiliated to which church?
-            </p>
-            <FaPlus size={15} />
+          <div className="flex flex-col justify-between items-start gap-5 rounded-md border border-gray-200 p-4 mb-2.5">
+            <div className="w-full flex justify-between items-center">
+              <p className="font-bold">NIFES is affiliated to which church?</p>
+              {show1 ? (
+                <FaPlus size={15} onClick={handleOpen1} />
+              ) : (
+                <FaMinus size={15} onClick={handleOpen1} />
+              )}
+            </div>
+            {!show1 && (
+              <p>
+                We are interdenominational and non denominational, we are not
+                affiliated to any church.
+              </p>
+            )}
           </div>
-          <div className="w-full flex justify-between items-center rounded-md border border-gray-200 p-4 mb-2.5">
-            <p className="font-semibold">What are NIFES cardinal programs</p>
-            <FaPlus size={15} />
+          <div className="flex flex-col justify-between items-start gap-5 rounded-md border border-gray-200 p-4 mb-2.5">
+            <div className="w-full flex justify-between items-center">
+              <p className="font-bold">What are NIFES cardinal programs</p>
+              {show2 ? (
+                <FaPlus size={15} onClick={handleOpen2} />
+              ) : (
+                <FaMinus size={15} onClick={handleOpen2} />
+              )}
+            </div>
+            {!show2 && (
+              <p>
+                DCG, NFC, Discipleship Training Weekend, Bible study Training
+                Weekend, Mission and Evangelism Training session.
+              </p>
+            )}
           </div>
-          <div className="w-full flex justify-between items-center rounded-md border border-gray-200 p-4 mb-2.5">
-            <p className="font-semibold">What is NFC</p>
-            <FaPlus size={15} />
+          <div className="flex flex-col justify-between items-start gap-5 rounded-md border border-gray-200 p-4 mb-2.5">
+            <div className="w-full flex justify-between items-center">
+              <p className="font-bold">What is NFC</p>
+              {show3 ? (
+                <FaPlus size={15} onClick={handleOpen3} />
+              ) : (
+                <FaMinus size={15} onClick={handleOpen3} />
+              )}
+            </div>
+            {!show3 && <p>Nifes foundation class</p>}
           </div>
-          <div className="w-full flex justify-between items-center rounded-md border border-gray-200 p-4 mb-2.5">
-            <p className="font-semibold">Wings in NIFES</p>
-            <FaPlus size={15} />
+          <div className="flex flex-col justify-between items-start gap-5 rounded-md border border-gray-200 p-4 mb-2.5">
+            <div className="w-full flex justify-between items-center">
+              <p className="font-bold">Wings in NIFES</p>
+              {show4 ? (
+                <FaPlus size={15} onClick={handleOpen4} />
+              ) : (
+                <FaMinus size={15} onClick={handleOpen4} />
+              )}
+            </div>
+            {!show4 && <p>Editorial, Choral, Prayer, Drama, Bible Study</p>}
           </div>
         </div>
       </div>

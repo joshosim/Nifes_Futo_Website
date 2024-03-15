@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   let currentDate = new Date();
@@ -56,7 +57,9 @@ const Footer = () => {
         <p>&copy; {`${date} ${dayAlph}, ${currentYear}`}</p>
       </div>
       <div className="rounded-md h-5 w-5 p-5 bg-gray-200 grid place-content-center">
-        <FaFacebook />
+        <Link to="https://m.facebook.com/profile.php/?id=100071843581289">
+          <FaFacebook />
+        </Link>
       </div>
     </div>
   );
