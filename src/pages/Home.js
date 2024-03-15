@@ -6,10 +6,10 @@ import FourthImage from "../assets/godly.jpg";
 import { FaPlus, FaMinus } from "react-icons/fa";
 
 const Home = () => {
-  const [show1, setShow1] = useState(false);
-  const [show2, setShow2] = useState(false);
-  const [show3, setShow3] = useState(false);
-  const [show4, setShow4] = useState(false);
+  const [show1, setShow1] = useState(true);
+  const [show2, setShow2] = useState(true);
+  const [show3, setShow3] = useState(true);
+  const [show4, setShow4] = useState(true);
   const handleOpen1 = () => {
     setShow1(!show1); // Toggle accordion
   };
@@ -139,7 +139,15 @@ const Home = () => {
           </p>
         </div>
         <div>
-          <video className="h-[250px] w-[450px] bg-black rounded-md gap-5"></video>
+          <video
+            className="h-[250px] w-[450px] rounded-md gap-5"
+            height={250}
+            width={450}
+            autoPlay
+            controls
+          >
+            <source src="https://m.youtube.com/watch?v=J7m3SA6P8yw&pp=ygUKbmlmZXMgZnV0bw%3D%3D" />
+          </video>
         </div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 mb-28">
