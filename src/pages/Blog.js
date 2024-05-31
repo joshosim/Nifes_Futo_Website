@@ -1,7 +1,7 @@
 import React from "react";
 import bg from "../assets/pexels-brettjordan-10828123.jpg";
 import godly from "../assets/godly.jpg";
-import { FaEyeDropper, FaEye, FaCalendarDays } from "react-icons/fa6";
+import { FaEye, FaCalendarDays } from "react-icons/fa6";
 
 const Blog = () => {
   return (
