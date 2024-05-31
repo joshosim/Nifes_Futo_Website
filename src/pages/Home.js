@@ -72,64 +72,6 @@ const Home = () => {
           <img src="" alt="/" />
         </div>
       </div>
-      <div className="mt-32">
-        <h2 className="text-center font-bold text-3xl mb-5">About NIFES</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-          <div className="flex justify-center items-center flex-col">
-            <img
-              src={FourthImage}
-              alt="/"
-              className="rounded-full object-cover object-center h-[150px] w-[150px] my-3"
-            />
-            <p className="font-bold">Evangelism</p>
-            <p className="text-[.8rem] text-center">
-              Communicating the gospel of Christ to the non-Christians on campus
-              is key to the transformation of the campus and the changing of
-              lives.
-            </p>
-          </div>
-          <div className="flex justify-center items-center flex-col">
-            <img
-              src={SecondImage}
-              alt="/"
-              className="rounded-full object-cover object-center h-[150px] w-[150px] my-3"
-            />
-            <p className="font-bold">Discipleship</p>
-            <p className="text-[.8rem] text-center">
-              Discipleship is the act of making someone becoming more like
-              his/her master. In our case, we seek to make them become more like
-              Christ.
-            </p>
-          </div>
-          <div className="flex justify-center items-center flex-col">
-            <img
-              src={ThirdImage}
-              alt="/"
-              className="rounded-full object-cover object-center h-[150px] w-[150px] my-3"
-            />
-            <p className="font-bold">Bible study</p>
-            <p className="text-[.8rem] text-center">
-              NIFES promotes the teachings of the Bibles above all other
-              teachings as advocated by Apostle Paul, who gives us an
-              all-important call to heed God’s Word. The call to scrutinize,
-              understand, and then apply Scripture.
-            </p>
-          </div>
-          <div className="flex justify-center items-center flex-col">
-            <img
-              src={FirstImage}
-              alt="/"
-              className="rounded-full object-cover object-center h-[150px] w-[150px] my-3"
-            />
-            <p className="font-bold">Prayer meeting</p>
-            <p className="text-[.8rem] text-center">
-              In NIFES we value our shared and private times of prayers because
-              we believe in prayer as the primary way through which we change
-              our lives and that of the students amongst whom we work on campus.
-            </p>
-          </div>
-        </div>
-      </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center my-28">
         <div>
           <h1 className="font-bold text-3xl">Join us in Bible Study</h1>
